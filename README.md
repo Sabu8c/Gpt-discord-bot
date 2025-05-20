@@ -1,6 +1,6 @@
-# 💬 GPT-FlirtyBot — Your Fun & Friendly Discord Companion
+# 💬 Gpt-discord-bot — A Customizable Conversational Discord Bot
 
-GPT-FlirtyBot is a playful, outgoing AI chatbot built using Discord.js and OpenAI's API. Designed to bring laughter, charm, and companionship to your Discord server, she flirts, jokes, compliments, and just loves hanging out with you and your friends.
+Gpt-discord-bot is a flexible, AI-powered chatbot for Discord that lets you define your own personality and conversation style using a custom system prompt. Built with Discord.js and OpenAI’s API, it enables natural, context-aware interactions in your servers.
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Node](https://img.shields.io/badge/node-%3E=18.x-brightgreen.svg)
@@ -10,11 +10,11 @@ GPT-FlirtyBot is a playful, outgoing AI chatbot built using Discord.js and OpenA
 
 ## 🌟 Features
 
-- 💁‍♀️ **Flirty AI Personality** powered by GPT
-- 💬 **Slash Commands** to toggle conversation mode
-- 📌 **Guild-based Memory**: Conversations are separated by server
-- 🧠 **OpenAI GPT-4o-mini Integration**
-- 🔒 **Environment variable support for secure tokens**
+- 💬 **Conversational AI** powered by OpenAI's GPT-4o-mini
+- 🛠️ **Customizable Personality** via editable system prompt
+- 📌 **Server-Based Context Memory**
+- ✅ **Slash Commands** to enable or disable chatbot mode
+- 🔒 **Secure Configuration** using environment variables
 
 ---
 
@@ -23,8 +23,8 @@ GPT-FlirtyBot is a playful, outgoing AI chatbot built using Discord.js and OpenA
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/gpt-flirtybot.git
-cd gpt-flirtybot
+git clone https://github.com/yourusername/gpt-chatbot.git
+cd gpt-chatbot
 ```
 
 ### 2. Install Dependencies
@@ -35,16 +35,29 @@ npm install
 
 ### 3. Create a `.env` File
 
-Create a `.env` file in the root folder and add the following:
+Add your credentials to a `.env` file in the root folder:
 
 ```
 DISCORD_TOKEN=your_discord_bot_token
 OPENAI_API_KEY=your_openai_api_key
 ```
 
-> 🔐 **Keep this file secret!** Never share your tokens publicly.
+> 🔐 Keep this file private. Never commit it to version control.
 
-### 4. Run the Bot
+### 4. Customize the System Prompt
+
+Open the bot’s source file and modify the `SYSTEM_PROMPT` variable to define your bot's personality and behavior:
+
+```js
+const SYSTEM_PROMPT = {
+  role: "system",
+  content: "You are a friendly and helpful assistant designed to chat with users in a relaxed and engaging way.",
+};
+```
+
+> 🎭 Make it anything you want — a formal assistant, a gamer buddy, a sci-fi robot, or something else entirely!
+
+### 5. Run the Bot
 
 ```bash
 node index.js
@@ -52,24 +65,12 @@ node index.js
 
 ---
 
-## 🛠 Commands
+## 🛠 Slash Commands
 
 | Command     | Description                             |
 |-------------|-----------------------------------------|
-| `/talk`     | Starts the AI chat mode for your server |
-| `/stoptalk` | Stops the AI chat mode                  |
-
----
-
-## 🤖 Personality
-
-The bot acts as a vibrant, extroverted girl who is:
-- Friendly, a bit mischievous 😏
-- Full of compliments and jokes 😂
-- Expressive with lots of emojis ✨
-- Chill, fun, and always ready to chat 💕
-
-This personality is defined using a **system prompt** passed to OpenAI's API.
+| `/talk`     | Activates chat mode in your server      |
+| `/stoptalk` | Deactivates chat mode                   |
 
 ---
 
@@ -82,11 +83,11 @@ This personality is defined using a **system prompt** passed to OpenAI's API.
 
 ---
 
-## 🧪 Example Interaction
+## 💡 Example Use Case
 
 ```plaintext
-User: Salut toi, tu fais quoi ?
-Bot: Coucou toi 😘 ! Je traîne ici, prête à papoter~ Qu’est-ce que tu racontes de beau ? 💖
+User: Hey, can you help me brainstorm ideas?
+Bot: Absolutely! What kind of project are you working on? 😊
 ```
 
 ---
@@ -97,10 +98,10 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-## 🌐 Contributing
+## 🤝 Contributing
 
-Feel free to open issues or submit pull requests to enhance the bot's features or personality!
+Pull requests and feature suggestions are welcome! Whether it's supporting persistent memory, multi-user threads, or logging, feel free to build on this foundation.
 
 ---
 
-Made with ❤️ and GPT magic.
+Made with 🧠 + ❤️ using OpenAI & Discord.js
