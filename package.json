@@ -1,0 +1,25 @@
+{
+  "name": "gpt-discord-bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sabu8c/Gpt-discord-bot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sabu8c/Gpt-discord-bot/issues"
+  },
+  "homepage": "https://github.com/Sabu8c/Gpt-discord-bot#readme",
+  "description": "",
+  "dependencies": {
+    "discord.js": "^14.19.3",
+    "dotenv": "^16.5.0",
+    "openai": "^4.100.0"
+  }
+}
